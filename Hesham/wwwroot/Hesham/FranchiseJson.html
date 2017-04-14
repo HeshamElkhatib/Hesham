@@ -1,0 +1,38 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<template>
+    <template is="dom-bind">
+        <h2>Settings: {{model.Name$}}</h2>
+        <h4>Edit franchise settings</h4>
+        <fieldset>
+            <label>Name: </label>
+            <input value="{{model.Name$::input}}"/>
+        </fieldset>
+        <fieldset>
+            <label>Street: </label>
+            <input value="{{model.Street$::input}}"/>
+        </fieldset>
+        <fieldset>
+            <label>Number: </label>
+            <input value="{{model.Number$::input}}"/>
+        </fieldset>
+        <fieldset>
+            <label>Zip code: </label>
+            <input value="{{model.ZipCode$::input}}"/>
+        </fieldset>
+        <fieldset>
+            <label>City: </label>
+            <input value="{{model.City$::input}}"/>
+        </fieldset>
+        <fieldset>
+            <label>Country: </label>
+            <input value="{{model.Country$::input}}"/>
+        </fieldset>
+         <fieldset>
+            <label>Address: </label>
+            <span>{{model.Address}}</span>
+        </fieldset>
+        <button value="{{model.SaveSettingsTrigger$}}">Save</button>
+
+    </template>
+</template>
