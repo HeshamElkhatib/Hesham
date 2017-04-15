@@ -9,5 +9,29 @@
         <button>Total commisions</button> - 
         <button>Average commision</button> - 
         <button>Positive trend</button> - 
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Number of homes sold</th>
+                <th>Total commission</th>
+                <th>Average Commission</th>
+                <th>Trend</th>
+            </tr>
+            <template is="dom-repeat" items="{{model.Franchises}}">
+                <tr>
+                    <td>{{item.Name$}}</td>
+                    <td>{{item.SoldHomes$}}</td>
+                    <td>{{item.TotalCommissions$}}</td>
+                    <td>{{item.AvgCommissions$}}</td>
+                </tr>
+            </template>
+        </table>
+        <h4>New Franchise Office</h4>
+        <fieldset>
+            <label>Name: </label>
+            <input value="{{model.NewFranchiseName$::input}}"/>
+            <button value="{{model.NewFranchiseTrigger$::click}}" onmousedown="this.value++">Create new</button>
+        </fieldset>
+
     </template>
 </template>
