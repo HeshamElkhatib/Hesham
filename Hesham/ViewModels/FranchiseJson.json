@@ -1,0 +1,27 @@
+{
+	"Html": "/Hesham/FranchiseJson.html",
+	"Name$": "",
+	"Street$": "",
+	"Number$": "",
+	"ZipCode$": "",
+	"City$": "",
+	"Country$": "",
+	"Address": "",
+	"SaveSettingsTrigger$": 0,
+	"NewTransaction": {
+		"Street$": "",
+		"Number$": "",
+		"ZipCode$": "",
+		"City$": "",
+		"Country$": "",
+		"Address": "",
+		"Date$": "",
+		"SalesPrice$": 0.0,
+		"Commission$": 0.0,
+	},
+	"Transactions": [{}],
+	"RegisterTrigger$": 0,
+	"TotalSales": 0.0,
+	"TotalCommissions": 0.0,
+	"HomesSold": 0
+}
