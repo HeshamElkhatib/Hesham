@@ -32,7 +32,65 @@
             <label>Address: </label>
             <span>{{model.Address}}</span>
         </fieldset>
-        <button value="{{model.SaveSettingsTrigger$}}">Save</button>
-
+        <button value="{{model.SaveSettingsTrigger$::click}}" onmousedown="++this.value">Save</button>
+        <h4>Register new Home of sale</h4>
+        <strong> Home info </strong>
+        <fieldset>
+            <label>Street: </label>
+            <input value="{{model.NewTransaction.Street$::input}}"/>
+        </fieldset>
+        <fieldset>
+            <label>Number: </label>
+            <input value="{{model.NewTransaction.Number$::input}}"/>
+        </fieldset>
+        <fieldset>
+            <label>Zip code: </label>
+            <input value="{{model.NewTransaction.ZipCode$::input}}"/>
+        </fieldset>
+        <fieldset>
+            <label>City: </label>
+            <input value="{{model.NewTransaction.City$::input}}"/>
+        </fieldset>
+        <fieldset>
+            <label>Country: </label>
+            <input value="{{model.NewTransaction.Country$::input}}"/>
+        </fieldset>
+         <fieldset>
+            <label>Address: </label>
+            <span>{{model.NewTransaction.Address$}}</span>
+        </fieldset>
+        <strong>Transaction Info</strong>
+        <fieldset>
+            <label>Date: </label>
+            <input value={{model.NewTransaction.Date$::input}} />
+        </fieldset>
+        <fieldset>
+            <label>Sales price: </label>
+            <input value={{model.NewTransaction.SalesPrice$::input}} />
+        </fieldset>
+        <fieldset>
+            <label>Commission: </label>
+            <input value={{model.NewTransaction.Commission$::input}} />
+        </fieldset>
+        
+        <button value="{{model.RegisterTrigger$::click}}" onmousedown="++this.value">Register</button>
+        <h4>List of transactions</h4>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Sales price</th>
+                <th>Commission</th>
+                <th>Address</th>
+            </tr>
+            <template is="dom-repeat" items="{{model.Transactions}}">
+                <tr>
+                    <td>{{item.Date$}}</td>
+                    <td>{{item.SalesPrice$}}</td>
+                    <td>{{item.Commission$}}</td>
+                    <td>{{item.Address}}</td>
+                </tr>
+        </template>
+        </table>
+        
     </template>
 </template>
